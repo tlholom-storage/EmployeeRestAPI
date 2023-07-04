@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\ServiceDependencies\EmployeeManagmentRestAPI - Zip Deploy\**" />
+    <Compile Remove="Properties\ServiceDependencies\EmployeeRestAPI - Web Deploy\**" />
+    <Compile Remove="Properties\ServiceDependencies\EmployeeRestAPI20221009133806 - Web Deploy\**" />
+    <Content Remove="Properties\ServiceDependencies\EmployeeManagmentRestAPI - Zip Deploy\**" />
+    <Content Remove="Properties\ServiceDependencies\EmployeeRestAPI - Web Deploy\**" />
+    <Content Remove="Properties\ServiceDependencies\EmployeeRestAPI20221009133806 - Web Deploy\**" />
+    <EmbeddedResource Remove="Properties\ServiceDependencies\EmployeeManagmentRestAPI - Zip Deploy\**" />
+    <EmbeddedResource Remove="Properties\ServiceDependencies\EmployeeRestAPI - Web Deploy\**" />
+    <EmbeddedResource Remove="Properties\ServiceDependencies\EmployeeRestAPI20221009133806 - Web Deploy\**" />
+    <None Remove="Properties\ServiceDependencies\EmployeeManagmentRestAPI - Zip Deploy\**" />
+    <None Remove="Properties\ServiceDependencies\EmployeeRestAPI - Web Deploy\**" />
+    <None Remove="Properties\ServiceDependencies\EmployeeRestAPI20221009133806 - Web Deploy\**" />
+    <_WebToolingArtifacts Remove="Properties\ServiceDependencies\EmployeeManagmentRestAPI - Zip Deploy\**" />
+    <_WebToolingArtifacts Remove="Properties\ServiceDependencies\EmployeeRestAPI - Web Deploy\**" />
+    <_WebToolingArtifacts Remove="Properties\ServiceDependencies\EmployeeRestAPI20221009133806 - Web Deploy\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeeRestAPI.Repository\EmployeeRestAPI.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\ServiceDependencies\" />
+  </ItemGroup>
+
+</Project>
